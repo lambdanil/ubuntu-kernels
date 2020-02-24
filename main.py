@@ -29,9 +29,15 @@ def main(argv):
             # Fetch URL info
             os.system("wget -q https://kernel.ubuntu.com/~kernel-ppa/mainline -O /tmp/ubuntu-kernels >> /dev/null")
             show()
+        if argv[1] == '-c' or argv[1] == '--clean-cache':
+            clean()
         else:
             print("Not enough arguments!")
     
+# Clean file
+def clean():
+    os.system('rm -f /tmp/ubuntu-kernels;rm -rf /tmp/ubuntu-kernels.d/')
+
 # List kernels
 def show():
     kernelfile = open("/tmp/ubuntu-kernels","r")
