@@ -29,7 +29,7 @@ def main(argv):
             # Fetch URL info
             os.system("wget -q https://kernel.ubuntu.com/~kernel-ppa/mainline -O /tmp/ubuntu-kernels >> /dev/null")
             show()
-        if argv[1] == '-c' or argv[1] == '--clean-cache':
+        elif argv[1] == '-c' or argv[1] == '--clean-cache':
             clean()
         else:
             print("Not enough arguments!")
