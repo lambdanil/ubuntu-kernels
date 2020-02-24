@@ -1,7 +1,8 @@
 # ubuntu-kernels
 Ubuntu kernel downloader
 # Usage
-Run in python with sudo:  
+Run in python with sudo:
+
     sudo python3 main.py
 
 To install:
