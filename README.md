@@ -28,3 +28,13 @@ To list available versions:
 or
 
     python3 main.py --list
+    
+To remove cache:
+
+    python3 main.py -c
+    
+or
+
+    python3 main.py --clean-cache
+
+**_(C) 2020 CuBeRJAN_**
