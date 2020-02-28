@@ -31,10 +31,10 @@ or
     
 To remove cache:
 
-    sudo python3 main.py -c
+    python3 main.py -c
     
 or
 
-    sudo python3 main.py --clean-cache
+    python3 main.py --clean-cache
 
 **_(C) 2020 CuBeRJAN_**
