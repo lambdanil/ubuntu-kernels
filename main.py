@@ -99,7 +99,7 @@ def install(version):
             else:
                 while '.deb' not in line or ('lowlatency' in line):
                     line = kernelfile.readline()
-            line = line.replace('&nbsp;   <a href="','')
+            line = line.replace('&nbsp;&nbsp;<a href="amd64','')
             link = []
             index = 0
             letter=str("")
@@ -111,10 +111,11 @@ def install(version):
             links.append(link)
         newlinks = []
         for item in links:
-            newlinks.append(f'https://kernel.ubuntu.com/~kernel-ppa/mainline/v{version}/{item}')
+            newlinks.append(f'https://kernel.ubuntu.com/~kernel-ppa/mainline/v{version}/amd64/{item}')
         os.system("mkdir -p /tmp/ubuntu-kernels.d")
         index = 0
         print("Fetching kernel files...")
+        print(newlinks)
         for item in newlinks:
             os.system(f'wget -q {item} -O /tmp/ubuntu-kernels.d/{links[index]}')
             index += 1
